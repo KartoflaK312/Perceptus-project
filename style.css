@@ -10,35 +10,64 @@
   padding: 0;
 }
 
-body{
-  background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+.mainContainer{
   display: flex;
-  justify-content:center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav{
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+  border-radius: 0;
 }
 
 .mainHeader{
-  font-size: 10vh;
+  font-size: 3vw;
   padding: 3vh;
+  position: absolute;
+  top:3vh;
 }
 
-nav>button{
+nav>a>button{
   text-decoration: none;
   border: 1px solid black;
   margin: 0 1vw;
   background: transparent;
   border-radius: 10%;
-  transition:0.5s ease-in-out;
-  font-size: 1.9rem;
+  transition:0.2s ease-in-out;
+  font-size: 1rem;
   font-weight: 400;
-  width: 20vw;
+  width:12vw;
   min-height: max-content;
-  height: 15vh;
+  height: 7vh;
+  font-weight: bold;
 }
 
-nav>button:hover{
-  transform: scale(1.1);
+.navButt{
+  margin-top: 9vh;
+}
+
+.loginButt{
+  position: absolute;
+  right: 3vw;
+  top: 5vh;
+}
+
+.loginButt:hover,nav>a>button:hover{
+  transform: scale(1.2);
+}
+
+main>h1{
+  margin-top: 15vh;
+}
+
+article{
+  margin-top: 15vh;
+  width: 70vw;
+  height: max-content;
 }
 
 .container{
@@ -207,7 +236,7 @@ input:valid ~ label{
   transition: 0.5s;
 }
 
-loginHeader{
+.loginHeader{
   height:100px;
   width:300px;
   position: absolute;
@@ -219,7 +248,7 @@ loginHeader{
 
 }
 
-loginHeader:before{
+.loginHeader:before{
   content: "";
   position:absolute; 
   height: 350%;
@@ -241,7 +270,7 @@ loginHeader:before{
   }
 }
 
-loginHeader:after{
+.loginHeader:after{
   content:"Akademia Perceptus";
   background-color:white;
   border-radius: 5px;
@@ -285,7 +314,7 @@ body {
   );
   background-size: 200%;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0px;
 
   text-align: center;
